@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import AgendaList from "./components/agenda/AgendaList";
 
 function App() {
     return (
@@ -27,10 +28,7 @@ function App() {
                 <div className="agenda">
                     <h2>今週のアジェンダ</h2>
                     <div className="agenda-list">
-                        <div className="agenda-item">定例会議準備</div>
-                        <div className="agenda-item">報告書作成</div>
-                        <div className="agenda-item">ワークショップ準備</div>
-                        <div className="agenda-item">社内技術勉強会</div>
+                        <AgendaList />
                     </div>
                 </div>
 

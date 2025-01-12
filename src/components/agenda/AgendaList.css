@@ -1,0 +1,31 @@
+.agenda-list {
+    max-height: calc(100vh - 150px);
+    /* 設定最大高度，超出時出現滾動條 */
+    overflow-y: auto;
+    /* 啟用垂直滾動條 */
+    padding-right: 10px;
+    /* 避免滾動條遮住內容 */
+}
+
+/* 隱藏滾動條外觀（可選，視需求而定） */
+.agenda-list::-webkit-scrollbar {
+    width: 8px;
+    /* 滾動條寬度 */
+}
+
+.agenda-list::-webkit-scrollbar-thumb {
+    background: #ccc;
+    /* 滾動條顏色 */
+    border-radius: 4px;
+    /* 滾動條圓角 */
+}
+
+.agenda-list::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+    /* 滾動條懸停顏色 */
+}
+
+.agenda-list::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    /* 滾動條軌道背景 */
+}

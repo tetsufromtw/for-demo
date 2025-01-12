@@ -1,0 +1,149 @@
+.agenda-item {
+    padding: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: box-shadow 0.2s ease;
+}
+
+.agenda-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 任務名稱 */
+.agenda-task {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* 任務細節 */
+.agenda-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.expand-toggle {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 8px;
+    text-decoration: underline;
+}
+
+/* 進度條和按鈕容器 */
+.agenda-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 進度條 */
+.agenda-slider {
+    flex: 1;
+    appearance: none;
+    height: 10px;
+    /* 增加高度 */
+    background: linear-gradient(to right, #ff7e5f 50%, #ddd 50%);
+    /* 動態背景 */
+    background-size: 100% 100%;
+    /* 背景填充整個條 */
+    background-repeat: no-repeat;
+    /* 禁止重複 */
+    border-radius: 50px;
+    /* 圓角進度條 */
+    outline: none;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    /* 懸浮效果 */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    /* 平滑過渡背景 */
+}
+
+/* 自定義滑塊樣式 */
+.agenda-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 24px;
+    /* 滑塊大小 */
+    height: 24px;
+    background: #fff;
+    /* 滑塊白色背景 */
+    border: 4px solid #fff;
+    /* 邊框顏色與左側漸層相符 */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 懸浮效果 */
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* 滑塊 hover 效果 */
+.agenda-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    /* 放大 */
+    background: #ffe3d5;
+    /* 更柔和的顏色 */
+}
+
+/* 滑塊點擊時效果 */
+.agenda-slider::-webkit-slider-thumb:active {
+    transform: scale(1.4);
+    /* 點擊放大 */
+    background: #feb47b;
+    /* 深色效果 */
+}
+
+/* 狀態按鈕 */
+.agenda-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #f37366;
+    color: #666;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    /* 固定按鈕寬度 */
+    width: 80px;
+    /* 可根據需求調整 */
+    height: 36px;
+    /* 確保按鈕高度一致 */
+
+    /* 文字置中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* 防止文字換行 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 過多時顯示省略號 */
+}
+
+
+
+.agenda-button:hover {
+    background-color: #f37366;
+    transform: scale(1.05);
+}
+
+.agenda-button:active {
+    background-color: #f37366;
+    transform: scale(0.95);
+}
+
+.agenda-button--inactive {
+    background-color: #e0e0e0;
+    /* 淡灰色 */
+    color: #666;
+    /* 灰色文字 */
+    cursor: not-allowed;
+    /* 禁用效果 */
+}

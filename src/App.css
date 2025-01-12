@@ -54,12 +54,16 @@
 }
 
 /* 左側アジェンダ區域 */
+/* 左側的任務欄 */
 .agenda {
   flex: 1;
-  padding: 20px;
+  padding: 20px 0;
   background-color: #ffffff;
   border-right: 1px solid #ddd;
+  overflow: hidden;
+  /* 防止內容超出邊界 */
 }
+
 
 .agenda h2 {
   font-size: 20px;
@@ -96,10 +100,12 @@
 
 /* Footer 區塊 */
 .footer {
-  padding: 10px 20px;
-  background-color: #ffffff;
-  border-top: 1px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
   text-align: center;
-  font-size: 14px;
-  color: #666;
+  padding: 10px;
+  border-top: 1px solid #ddd;
 }
