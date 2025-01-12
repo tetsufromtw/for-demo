@@ -1,0 +1,105 @@
+/* 整體布局 */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Header 區塊 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-left h1 {
+  font-size: 20px;
+  color: #333;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 16px;
+  color: #333;
+}
+
+/* 主體內容 */
+.content {
+  display: flex;
+  flex: 1;
+  overflow-y: auto;
+  /* 確保內容過多時可滾動 */
+}
+
+/* 左側アジェンダ區域 */
+.agenda {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+}
+
+.agenda h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.agenda-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.agenda-item {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 右側遊戲動畫區域 */
+.game {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+.game-placeholder {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Footer 區塊 */
+.footer {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
