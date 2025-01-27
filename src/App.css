@@ -49,7 +49,8 @@
 .content {
   display: flex;
   flex: 1;
-  overflow-y: auto;
+  height: calc(100vh - 60px);
+  overflow: hidden;
   /* 確保內容過多時可滾動 */
 }
 
@@ -60,10 +61,14 @@
   padding: 20px 0;
   background-color: #ffffff;
   border-right: 1px solid #ddd;
-  overflow: hidden;
+  overflow-y: auto;
+  max-height: 100%;
   /* 防止內容超出邊界 */
 }
 
+.game {
+  overflow: hidden;
+}
 
 .agenda h2 {
   font-size: 20px;
@@ -108,4 +113,69 @@
   text-align: center;
   padding: 10px;
   border-top: 1px solid #ddd;
+}
+
+/* "今週のアジェンダ" 標題樣式 */
+.agenda-title {
+  background-color: #e0e0e0;
+  /* 背景顏色與 "もう少し！" 一致 */
+  color: #666;
+  /* 文字顏色 */
+  font-size: 5px;
+  /* 字體大小 */
+  font-weight: bold;
+  /* 粗體字 */
+  padding: 8px 16px;
+  /* 內部填充，控制文字與邊框距離 */
+  border-radius: 20px;
+  /* 四角弧度 */
+  text-align: center;
+  /* 文字置中 */
+  display: inline-block;
+  /* 內聯區塊，適合用於短句標題 */
+  margin-bottom: 32px;
+  /* 與下面內容保持間距 */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  /* 垂直置中 */
+  gap: 10px;
+  /* 照片和文字之間的距離 */
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* 圓形照片 */
+  object-fit: cover;
+  /* 確保圖片不變形 */
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  /* 垂直排列名字和等級 */
+  justify-content: center;
+  /* 垂直置中 */
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-level {
+  font-size: 14px;
+  color: #666;
+}
+
+.highlight {
+  color: #fbdfad;
+  /* 設置 "PLUS" 的顏色 */
+  font-weight: bold;
+  /* 可選：加粗以突出顯示 */
 }

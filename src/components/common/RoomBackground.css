@@ -1,0 +1,24 @@
+.room-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3eeee;
+    /* 設置背景色 */
+}
+
+.room-video {
+    width: auto;
+    /* 讓影片寬度填滿容器 */
+    height: auto;
+    /* 高度根據比例自適應 */
+    min-width: 95%;
+    /* 即使影片小，也強制至少與容器等寬 */
+    min-height: 95%;
+    /* 即使影片小，也強制至少與容器等高 */
+    object-fit: contain;
+    /* 保持影片比例 */
+    background-color: #f3eeee;
+}
