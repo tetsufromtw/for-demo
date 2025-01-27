@@ -1,5 +1,8 @@
 import React from "react";
 import "./App.css";
+import AgendaList from "./components/agenda/AgendaList";
+import RoomBackground from "./components/common/RoomBackground";
+import takatomoImage from "./assets/images/takatomo.jpg";
 
 function App() {
     return (
@@ -7,42 +10,40 @@ function App() {
             {/* 上方的顯示區塊（Header） */}
             <div className="header">
                 <div className="header-left">
-                    <h1>Standby PLUS</h1>
+                    <h1>
+                        standby. <span className="highlight">PLUS</span>
+                    </h1>
                 </div>
                 <div className="header-right">
                     <div className="user-info">
                         <img
-                            src="https://via.placeholder.com/40"
+                            src={takatomoImage}
                             alt="User Avatar"
                             className="user-avatar"
                         />
-                        <span className="user-name">Sara</span>
+                        <div className="user-details">
+                            <span className="user-name">Takatomo</span>
+                            <span className="user-level">Lv 100</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
             {/* 中間的主要內容區塊 */}
             <div className="content">
                 {/* 左側的アジェンダ區域 */}
                 <div className="agenda">
-                    <h2>今週のアジェンダ</h2>
+                    <h2 className="agenda-title">今週のアジェンダ</h2>
                     <div className="agenda-list">
-                        <div className="agenda-item">定例会議準備</div>
-                        <div className="agenda-item">報告書作成</div>
-                        <div className="agenda-item">ワークショップ準備</div>
-                        <div className="agenda-item">社内技術勉強会</div>
+                        <AgendaList />
                     </div>
                 </div>
 
                 {/* 右側的遊戲動畫區域 */}
                 <div className="game">
-                    <div className="game-placeholder">遊戲動畫區域</div>
+                    <RoomBackground />
                 </div>
-            </div>
-
-            {/* 下方的預留區塊（Footer） */}
-            <div className="footer">
-                <span>© 2025 Standby PLUS. All rights reserved.</span>
             </div>
         </div>
     );

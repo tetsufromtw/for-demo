@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  frontend:
+    image: frontend-demo:latest # 替換為你的映像名稱
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" # 映射本地端口 8080 到容器內的 Nginx 默認端口 80
+    environment:
+      - NODE_ENV=production
