@@ -1,6 +1,6 @@
 import React from "react";
-import VideoPlayer from "../common/VideoPlayer";
 import demoVideo from "../../assets/videos/demo.mp4";
+import demoImage from "../../assets/images/demo.png";
 import "./RoomBackground.css";
 
 const RoomBackground = () => {
@@ -12,6 +12,7 @@ const RoomBackground = () => {
                 autoPlay
                 loop
                 muted
+                poster={demoImage}
             >
                 你的瀏覽器不支援播放此影片。
             </video>
