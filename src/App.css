@@ -28,7 +28,7 @@ body {
   align-items: center;
   padding: 10px 20px;
   background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,7 +76,7 @@ body {
   flex: 1;
   padding: 20px 0;
   background-color: #ffffff;
-  border-right: 1px solid #ddd;
+  /* border-right: 1px solid #ddd; */
   overflow-y: auto;
   /* 僅允許上下滾動 */
   max-height: calc(100vh - 60px - 20px);
@@ -119,9 +119,11 @@ body {
 }
 
 .room-video {
-  width: 100%;
+  width: 50%;
   height: auto;
   object-fit: contain;
+  border-radius: 10px;
+  margin: 10px;
   /* 保持影片比例 */
 }
 

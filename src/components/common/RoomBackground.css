@@ -6,19 +6,21 @@
     justify-content: center;
     align-items: center;
     background-color: #f3eeee;
+
     /* 設置背景色 */
 }
 
 .room-video {
-    width: auto;
-    /* 讓影片寬度填滿容器 */
-    height: auto;
-    /* 高度根據比例自適應 */
-    min-width: 95%;
-    /* 即使影片小，也強制至少與容器等寬 */
-    min-height: 95%;
-    /* 即使影片小，也強制至少與容器等高 */
-    object-fit: contain;
-    /* 保持影片比例 */
-    background-color: #f3eeee;
+    width: 300%;
+    /* 設定寬度相對於背景區域的比例 */
+    height: 100%;
+    /* 保持比例 */
+    max-height: calc(100% - 40px);
+    object-fit: fill;
+    /* 減去 padding 確保垂直方向有間距 */
+    /* object-fit: contain; */
+    /* 保持比例 */
+
+    border-radius: 15px;
+    /* 讓影片本身四角有弧度 */
 }
