@@ -217,9 +217,19 @@ body {
 
   .room-video {
     width: 100%;
-    /* 確保影片適配寬度 */
+    /* 確保影片或圖片適配容器寬度 */
     height: auto;
+    /* 保持影片或圖片比例 */
+    max-width: 90vw;
+    /* 限制最大寬度，避免過大 */
+    max-height: 90vh;
+    /* 限制最大高度，避免超出視窗 */
     object-fit: contain;
-    /* 保持比例 */
+    /* 保持比例不變，完整顯示影片或圖片 */
+    border-radius: 10px;
+    /* 四角圓角 */
+    background-color: #f3eeee;
+    /* 預設背景色，避免無影片時空白 */
   }
+
 }
