@@ -95,6 +95,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
 }
 
 .agenda-item {
@@ -202,9 +203,21 @@ body {
     /* 任務清單在第二區域 */
     flex: none;
     padding: 20px;
-    max-height: auto;
+    /* max-height: auto; */
+    max-height: calc(100vh - 60px);
     overflow-y: auto;
   }
+
+  .agenda-list {
+    padding-bottom: 30px;
+    /* 增加底部空間，讓最後一個項目完整顯示 */
+  }
+
+  .agenda-item:last-child {
+    margin-bottom: 0;
+    /* 移除最後一個項目的外部間距 */
+  }
+
 
   .game {
     order: 1;

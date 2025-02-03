@@ -36,14 +36,7 @@ function AgendaList() {
             progress: 70,
             date: "2025-03-15",
         },
-        {
-            id: 5,
-            task: "社内技術勉強会",
-            description: "スライド作成と発表準備を完了する必要があります。",
-            status: "in-progress",
-            progress: 70,
-            date: "2025-03-19",
-        },
+
     ]);
 
     const [isEditing, setIsEditing] = useState(false); // 控制彈窗是否顯示
