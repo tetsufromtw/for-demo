@@ -7,8 +7,10 @@ const RoomBackground = () => {
 
     useEffect(() => {
         if (videoRef.current) {
+            videoRef.current.setAttribute("playsinline", "true");
+            videoRef.current.setAttribute("webkit-playsinline", "true");
             videoRef.current.play().catch((error) => {
-                console.error("自動播放失敗，需用戶手動播放", error);
+                console.error("自動播放失敗：", error);
             });
         }
     }, []);
@@ -22,10 +24,9 @@ const RoomBackground = () => {
                 autoPlay
                 loop
                 muted
-                playsinline
                 poster={demoImage}
             >
-                你的瀏覽器不支援播放此影片。
+                NOT Supported
             </video>
         </div>
     );
