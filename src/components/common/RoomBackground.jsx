@@ -26,7 +26,7 @@ const RoomBackground = () => {
                 muted
                 poster={demoImage}
             >
-                你的瀏覽器不支援播放此影片。
+                NOT Supported
             </video>
         </div>
     );
